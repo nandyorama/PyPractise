@@ -5,7 +5,7 @@ class dClass(object):
 	def __init__(self,oFunc):
 		self.oFunc = oFunc
  
-	def __call__(self,*args):
+	def __call__(self,*args):# added *args as multiple function i.e display4 and display_info4 have different number of Parameters
 		print("Class Executed before {}".format(self.oFunc.__name__))
 		return self.oFunc(*args)
  
@@ -25,7 +25,7 @@ print("*****************************")
  
 #example3 Function Decorator
 def dFunc2(oFunc):
-	def wFunc(*args):
+	def wFunc(*args): # added *args as multiple function i.e display2 and display_info have different number of Parameters
 		print("Wrapper Executed before {}".format(oFunc.__name__))
 		return oFunc(*args)
 	return wFunc
