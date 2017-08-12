@@ -1,3 +1,4 @@
+#Decorator used for adding additional functionality to original function
 #decorator function
 #example4 Class Decorator
 class dClass(object):
