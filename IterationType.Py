@@ -83,4 +83,29 @@ print(next(sqi))
 
 
   
+import logging
+logging.basicConfig(filename='example.log', level=logging.INFO)
+
+#Option 6 Using map + lambda
+my_lst = map(lambda n:n*n,lst)
+print(list(my_lst))
+
+#Example for printing only even
+def even(lst):
+  logging.info('Ran {} with args: {}'.format(even.__name__,lst))
+  my_list=[]
+  for n in lst:
+    if n%2 == 0:
+      my_list.append(n)
+  return my_list
+
+print(even(lst))
+
+#Using list comprehensions
+even_lst = [n for n in lst if n%2 ==0]
+print(even_lst)
+
+#Using filter + lambda function
+filter_lst = filter(lambda n: n%2 ==0 ,lst)
+print(list(filter_lst))
 
